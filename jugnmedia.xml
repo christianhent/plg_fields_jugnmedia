@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<extension type="plugin" version="3.7.0" group="fields" method="upgrade">
+    <name>PLG_FIELDS_JUGNMEDIA</name>
+    <author>Christian Hent</author>
+    <creationDate>Juni 2017</creationDate>
+    <copyright>Copyright (C)2017 Christian Hent. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <authorEmail>hent.dev@googlemail.com</authorEmail>
+    <authorUrl>wwwjugn.de</authorUrl>
+    <version>1.1</version>
+    <description>PLG_FIELDS_JUGNMEDIA_XML_DESCRIPTION</description>
+    <scriptfile>jugnmedia.script.php</scriptfile>
+    <files>
+        <filename plugin="jugnmedia">jugnmedia.php</filename>
+        <filename>index.html</filename>
+        <folder>params</folder>
+        <folder>layouts</folder>
+        <folder>tmpl</folder>
+        <folder>language</folder>
+    </files>
+    <languages>
+        <language tag="en-GB">language/en-GB/en-GB.plg_fields_jugnmedia.ini</language>
+        <language tag="en-GB">language/en-GB/en-GB.plg_fields_jugnmedia.sys.ini</language>
+        <language tag="de-DE">language/de-DE/de-DE.plg_fields_jugnmedia.ini</language>
+        <language tag="de-DE">language/de-DE/de-DE.plg_fields_jugnmedia.sys.ini</language>
+    </languages>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field
+                        name="directory"
+                        type="folderlist"
+                        directory="images"
+                        required="true"
+                        hide_none="true"
+                        hide_default="true"
+                        recursive="true"
+                        default="/"
+                        label="PLG_FIELDS_JUGNMEDIA_PARAMS_DIRECTORY_LABEL"
+                        description="PLG_FIELDS_JUGNMEDIA_PARAMS_DIRECTORY_DESC"
+                >
+                    <option value="/">/</option>
+                </field>
+
+                <field
+                        name="multiple"
+                        type="list"
+                        class="chzn-color-state"
+                        default="0"
+                        label="PLG_FIELDS_JUGNMEDIA_PARAMS_MULTIPLE_LABEL"
+                        description="PLG_FIELDS_JUGNMEDIA_PARAMS_MULTIPLE_DESC"
+                >
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+</extension>
