@@ -16,7 +16,7 @@ class PlgFieldsJugnmediaInstallerScript
 
         if (version_compare($version->getShortVersion(), "3.7.0", "<"))
         {
-            Jerror::raiseWarning(null, JText::_('PLG_FIELDS_JUGNMEDIA_INSTALL_NOJ37_ERROR'));
+            JError::raiseWarning(null, JText::_('PLG_FIELDS_JUGNMEDIA_INSTALL_NOJ37_ERROR'));
 
             return false;
         }
